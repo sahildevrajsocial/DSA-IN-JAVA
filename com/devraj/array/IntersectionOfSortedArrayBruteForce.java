@@ -13,9 +13,9 @@ public class IntersectionOfSortedArray {
     }
 
     static List<Integer> findIntersection(int[] arr1, int[] arr2) {
-        List<Integer> list1 = new ArrayList<>();
-        for (int num : arr1) {
-            list1.add(num);
+        Set<Integer> set1 = new HashSet<>();
+        for(int num:arr1) {
+            set1.add(num);
         }
         List<Integer> list2 = new ArrayList<>();
         for (int num : arr2) {
