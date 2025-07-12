@@ -2,7 +2,7 @@ package com.devraj.array;
 
 import java.util.*;
 
-public class IntersectionOfSortedArray {
+public class IntersectionOfSortedArrayBruteForce {
     public static void main(String[] args) {
         int[] arr1 = {1, 2, 2, 3, 3, 4, 5, 6};
         int[] arr2 = {2, 3, 3, 5, 6, 6, 7};
@@ -17,11 +17,15 @@ public class IntersectionOfSortedArray {
         for(int num:arr1) {
             set1.add(num);
         }
-        List<Integer> list2 = new ArrayList<>();
-        for (int num : arr2) {
-            list2.add(num);
+
+        Set<Integer> result = new LinkedHashSet<>();
+        for(int num:arr2) {
+            if(set1.contains(num)) {
+                result.add(num);
+            }
         }
-        list1.retainAll(list2);
-        return list1;
+
+        return new ArrayList(result);
     }
+
 }
