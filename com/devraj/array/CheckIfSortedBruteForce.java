@@ -17,3 +17,4 @@ public class CheckIfSortedBruteForce {
         return true;
     }
 }
+
