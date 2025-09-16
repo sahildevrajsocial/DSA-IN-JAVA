@@ -38,7 +38,7 @@ public class NumberHashing1 {
         System.out.println("Enter number of queries:- ");
         int q = sc.nextInt();
         while(q-->0) {
-            System.out.println("Enter number to check frquency:- ");
+            System.out.println("Enter number to check frequency:- ");
             int num = sc.nextInt();
 
             if(num>0 && num < hash.length) {
