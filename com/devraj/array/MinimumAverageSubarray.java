@@ -14,7 +14,7 @@ public class MinimumAverageSubarray {
         int left = 0;
         int right = target - 1;
         double sumAverage2;
-
+        int i=0, j=0;
 
         while(right < arr.length-1) {
 
@@ -23,9 +23,14 @@ public class MinimumAverageSubarray {
             right++;
             sum = sum + arr[right];
             sumAverage2 = (double) sum/target;
-            minAverage = Math.min(minAverage, sumAverage2);
+
+            if(sumAverage2<minAverage) {
+                i=left;
+                j=right;
+                minAverage = sumAverage2;
+            }
         }
         System.out.println(minAverage);
-        System.out.println(arr[left]+","+arr[right]);
+        System.out.println(arr[i]+","+arr[j]);
     }
 }
