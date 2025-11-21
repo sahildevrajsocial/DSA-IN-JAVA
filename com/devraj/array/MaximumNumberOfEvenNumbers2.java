@@ -1,4 +1,4 @@
-package com.devraj.jcf;
+package com.devraj.array;
 
 public class MaximumNumberOfEvenNumbers2 {
     public static void main(String[] args) {
